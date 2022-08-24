@@ -24,6 +24,43 @@
 
 <body>
 
+    <main>
+
+        <div class="container mt-5 w-50">
+
+            <div>
+                <div class="mb-3">
+                    <label for="kmTrip" class="form-label">Indicare i kilometri da percorrere:</label>
+                    <input type="number" class="form-control" id="kmTrip" aria-describedby="kmTrip">
+                </div>
+
+                <div class="mb-3">
+                    <label for="ageRange" class="form-label">Inserire range di età:</label>
+                    <select class="form-select" id="ageRange" aria-label="ageRangeSelection">
+                        <option value="0">Minorenne</option>
+                        <option value="1">Maggiorenne</option>
+                        <option value="2">Over 65</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <div class="row text-center">
+
+                <div id="biglietto"></div>
+
+            </div>
+
+        </div>
+
+    </main>
+
 </body>
 
 </html>
