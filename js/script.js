@@ -14,17 +14,28 @@ const submitButton = document.getElementById('submitButton');
 submitButton.addEventListener('click',
     function () {
 
+        // Dichiarazione variabili e costanti
+
         const kmLength = parseInt(document.getElementById('kmTrip').value);
-        console.log(kmLength);
+        console.log('kmLength ' + kmLength);
 
         const passengerAge = parseInt(document.getElementById('ageRange').value);
-        console.log(passengerAge)
+        console.log('passengerAge ' + passengerAge)
 
         let ticketType = document.getElementById('ticket-type');
         console.log('ticketType outside ' + ticketType.innerHTML);
 
         let ticketPrice = kmLength * costoPerKm;
         console.log('ticketPrice outside ' + ticketPrice);
+
+        const passengerName = document.getElementById('passengerName').value;
+        const ticketName = document.getElementById('name');
+        const ticketFinalPrice = document.getElementById('ticket-price');
+        let wagon = document.getElementById('wagon');
+        const cpCode = document.getElementById('cp-code');
+
+
+        // Inizio istruzioni
 
         switch (passengerAge) {
             case 0:
@@ -45,18 +56,10 @@ submitButton.addEventListener('click',
                 break;
         }
 
-        // const ticket = document.getElementById('biglietto');
-        const passengerName = document.getElementById('passengerName').value;
-        const ticketName = document.getElementById('name');
-        const ticketFinalPrice = document.getElementById('ticket-price');
-        let wagon = document.getElementById('wagon');
-        const cpCode = document.getElementById('cp-code');
-
         console.log('Il costo del biglietto è: ' + ticketPrice.toFixed(2) + '€')
         ticketName.innerHTML = passengerName;
         ticketFinalPrice.innerHTML = ticketPrice.toFixed(2) + '€';
-        wagon.innerHTML = Math.floor((Math.random() * 12) + 1);
-        cpCode.innerHTML = Math.floor(Math.random() * 90000) + 10000;
-        // ticket.innerHTML = 'Il costo del biglietto è: ' + ticketPrice.toFixed(2) + '€';
+        wagon.innerHTML = Math.floor((Math.random() * 12) + 1); //Numero casuale per la carrozza
+        cpCode.innerHTML = Math.floor(Math.random() * 90000) + 10000; //Numero casuale di 5 cifre
 
     })
