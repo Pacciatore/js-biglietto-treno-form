@@ -28,24 +28,36 @@
 
         <div id="ticket-compiler">
 
-            <div class="container mt-5 w-50">
+            <div class="container mt-5 w-75">
 
-                <div>
-                    <div class="mb-3">
-                        <label for="kmTrip" class="form-label">Indicare i kilometri da percorrere:</label>
+                <div class="row justify-content-around">
+
+                    <div class="col-3 mb-3 d-flex flex-column justify-content-between text-center">
+                        <label for="passengerName" class="form-label">Nome e Cognome</label>
+                        <input type="text" class="form-control" name="passengerName" id="passengerName">
+                    </div>
+
+                    <div class="col-3 mb-3 d-flex flex-column justify-content-between text-center">
+                        <label for="kmTrip" class="form-label">Km da percorrere:</label>
                         <input type="number" class="form-control" id="kmTrip" aria-describedby="kmTrip">
                     </div>
 
-                    <div class="mb-3">
+                    <div class="col-3 mb-3 d-flex flex-column justify-content-between text-center">
                         <label for="ageRange" class="form-label">Inserire range di età:</label>
                         <select class="form-select" id="ageRange" aria-label="ageRangeSelection">
                             <option value="0">Minorenne</option>
-                            <option value="1">Maggiorenne</option>
+                            <option selected value="1">Maggiorenne</option>
                             <option value="2">Over 65</option>
                         </select>
                     </div>
 
-                    <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+                    <div class="col-6 text-end mt-4">
+                        <button type="button" class="btn btn-primary" id="submitButton">Invia</button>
+                    </div>
+
+                    <div class="col-6 text-start mt-4">
+                        <button type="button" class="btn btn-primary" id="backButton">Annulla</button>
+                    </div>
 
                 </div>
 
