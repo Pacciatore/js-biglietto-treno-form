@@ -30,10 +30,10 @@
 
             <div class="container mt-5 w-75">
 
-                <div class="row justify-content-around">
+                <form class="row justify-content-around">
 
                     <div class="col-3 mb-3 d-flex flex-column justify-content-between text-center">
-                        <label for="passengerName" class="form-label">Nome e Cognome</label>
+                        <label for="passengerName" class="form-label">Nome e Cognome:</label>
                         <input type="text" class="form-control" name="passengerName" id="passengerName">
                     </div>
 
@@ -56,10 +56,10 @@
                     </div>
 
                     <div class="col-6 text-start mt-4">
-                        <button type="button" class="btn btn-primary" id="backButton">Annulla</button>
+                        <button type="button" class="btn btn-primary" id="cancelButton">Annulla</button>
                     </div>
 
-                </div>
+                </form>
 
             </div>
 
@@ -71,7 +71,9 @@
 
                 <div id="biglietto" class="container mx-0 mt-5 row justify-content-center text-center">
 
-                    <div class="col-12">
+                    <div id="error-message" class="col-12"></div>
+
+                    <div id="ticket-content" class="col-12 visually-hidden">
 
                         <h1 class="h3 text-uppercase">Il tuo biglietto</h1>
 
