@@ -22,38 +22,84 @@
     <title>Biglietti Treno Form</title>
 </head>
 
-<body>
+<body class="debug">
 
     <main>
 
-        <div class="container mt-5 w-50">
+        <div id="ticket-compiler">
 
-            <div>
-                <div class="mb-3">
-                    <label for="kmTrip" class="form-label">Indicare i kilometri da percorrere:</label>
-                    <input type="number" class="form-control" id="kmTrip" aria-describedby="kmTrip">
+            <div class="container mt-5 w-50">
+
+                <div>
+                    <div class="mb-3">
+                        <label for="kmTrip" class="form-label">Indicare i kilometri da percorrere:</label>
+                        <input type="number" class="form-control" id="kmTrip" aria-describedby="kmTrip">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ageRange" class="form-label">Inserire range di età:</label>
+                        <select class="form-select" id="ageRange" aria-label="ageRangeSelection">
+                            <option value="0">Minorenne</option>
+                            <option value="1">Maggiorenne</option>
+                            <option value="2">Over 65</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+
                 </div>
-
-                <div class="mb-3">
-                    <label for="ageRange" class="form-label">Inserire range di età:</label>
-                    <select class="form-select" id="ageRange" aria-label="ageRangeSelection">
-                        <option value="0">Minorenne</option>
-                        <option value="1">Maggiorenne</option>
-                        <option value="2">Over 65</option>
-                    </select>
-                </div>
-
-                <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
 
             </div>
 
         </div>
 
-        <div class="container">
+        <div id="ticket-resume">
 
-            <div class="row text-center">
+            <div class="container">
 
-                <div id="biglietto"></div>
+                <div id="biglietto" class="container mx-0 mt-5 row justify-content-center text-center">
+
+                    <div class="col-12">
+
+                        <h1 class="h3 text-uppercase">Il tuo biglietto</h1>
+
+                        <div class="row m-0">
+
+                            <div class="col-4 text-uppercase text-start h5">Dettaglio passegeri</div>
+
+                            <div class="col-12 row text-start bg-white">
+
+                                <div class="col-3">
+                                    <div class="h4 text-uppercase pt-2">Nome passeggero</div>
+                                    <div class="name h5">Jon Snow</div>
+                                </div>
+
+                                <div class="col-3">
+                                    <div class="h6 pt-2 pb-4">Offerta</div>
+                                    <div id="ticket-type" class="pb-3">Biglietto Standard</div>
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="h6 pt-2 pb-4">Carrozza</div>
+                                    <div id="carrozza" class="pb-3">5</div>
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="h6 pt-2 pb-4">Codice CP</div>
+                                    <div id="cp-code" class="pb-3">92911</div>
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="h6 pt-2 pb-4">Costo biglietto</div>
+                                    <div id="ticket-price" class="pb-3">2.10€</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
